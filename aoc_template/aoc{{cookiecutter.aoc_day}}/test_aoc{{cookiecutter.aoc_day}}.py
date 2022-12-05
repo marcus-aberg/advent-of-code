@@ -2,7 +2,7 @@
 
 import pathlib
 import pytest
-import aoc_template as aoc
+import aoc{{cookiecutter.aoc_day}} as aoc
 
 PUZZLE_DIR = pathlib.Path(__file__).parent
 
