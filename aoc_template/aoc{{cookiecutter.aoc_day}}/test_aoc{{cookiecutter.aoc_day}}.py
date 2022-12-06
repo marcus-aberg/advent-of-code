@@ -6,6 +6,8 @@ import aoc{{cookiecutter.aoc_day}} as aoc
 
 PUZZLE_DIR = pathlib.Path(__file__).parent
 
+# TODO: Some problems have more than one example
+
 @pytest.fixture
 def example1():
     puzzle_input = (PUZZLE_DIR / "example1.txt").read_text().strip()
