@@ -46,7 +46,7 @@ def construct_graph(data):
                 
                 if sr >= 0 and sc >= 0 and sr <= (len(data) - 1) and sc <= (len(row) - 1): # Inside matrix
                     
-                    if (height(data[sr][sc]) - height(loc)) <= 1: # Allowed step
+                    if (height(data[sr][sc]) - height(loc)) <= 1: # Allowed step - TODO: I probably want to prioritize search directions that lead upward
                         
                         n["children"].append((sr, sc))
                         
@@ -146,7 +146,7 @@ def find_shortest_path(S, E, data):
             if child_item is None: # Unseen node
                 
                 # print(f"Appending: {child}")
-                queue_item = {"id": child, "length": child_length, "prior": current}
+                queue_item = {"id": child, "length": child_length, "prior": current}    # TODO: Maybe I can add some heuristic to improve the search direction
                 priority_queue.append(queue_item)
                 
             else: # Seen node
@@ -160,7 +160,7 @@ def find_shortest_path(S, E, data):
                     
                     pass
         
-        priority_queue.sort(key = sort_criteria)
+        priority_queue.sort(key = sort_criteria) # TODO: Maybe I can insert the nodes in the priority-queue properly instead of sorting it every time
     
     # Construct path backwards        
     shortest_path = []
