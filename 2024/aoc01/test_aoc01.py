@@ -2,9 +2,11 @@
 
 import pathlib
 import pytest
-import aoc{{cookiecutter.aoc_day}} as aoc # type: ignore
+import aoc01 as aoc
 
 PUZZLE_DIR = pathlib.Path(__file__).parent
+
+# TODO: Some problems have more than one example
 
 
 @pytest.fixture

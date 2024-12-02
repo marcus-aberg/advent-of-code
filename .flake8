@@ -1,0 +1,3 @@
+[flake8]
+exclude = 
+    aoc_template/  # This will exclude the folder "aoc_template" from Flake8 checks
