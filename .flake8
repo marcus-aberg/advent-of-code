@@ -1,3 +1,7 @@
 [flake8]
 exclude = 
     aoc_template/  # This will exclude the folder "aoc_template" from Flake8 checks
+max-line-length = 88  # Black's default line length
+extend-ignore = 
+    E203,  # Whitespace before ':', Black is compatible with PEP 8 here
+    W503   # Line break before binary operator, Black prefers this style
